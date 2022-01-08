@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { Fragment, useState } from "react";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import {addData,removeData} from './actions/index'
 
 function App() {
+  let dispatch = useDispatch()
+  let taskData = useSelector(state => state.task)
+  let [task,setTask] = useState()
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Belajar Redux </h1>
+
+      <Fragment>
+      {
+        taskData?.map((value) => (
+          <div style={{marginBottom: "10px"}}>{value.name} <button style={{ marginLeft: "20px"}} onClick={() => {dispatch(removeData(value.id))}}>remove</button> </div>
+        ))
+      }
+      </Fragment>
+
+      <input type="text" placeholder="masukan task" onChange={(e) => {setTask(e.target.value)}} />
+      <button onClick={() => {dispatch(addData(task))}}>tambah</button>
     </div>
   );
 }
