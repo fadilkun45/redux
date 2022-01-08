@@ -1,3 +1,7 @@
+# about this application
+
+this application make with redux and redux thunk 
+
 # installation & running
 
 > npm i
@@ -6,4 +10,4 @@
 
 > open new terminal tab run the fake server "npx json-server --watch fake-server/db.json"
 
-# copyright 2022 
+<h1> copyright 2022 &copy; Faldi Ramadhan  </h1> 
