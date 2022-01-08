@@ -1,6 +1,6 @@
 # about this application
 
-this application make with redux and redux thunk 
+this application make with redux and redux thunk for redux only check the branch redux 
 
 # installation & running
 
@@ -10,4 +10,4 @@ this application make with redux and redux thunk
 
 > open new terminal tab run the fake server "npx json-server --watch fake-server/db.json"
 
-<h1> copyright 2022 &copy; Faldi Ramadhan  </h1> 
+<p> copyright 2022 &copy; Faldi Ramadhan  </p> 
